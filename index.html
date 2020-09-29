@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+
+        canvas {
+            border: 30px solid red;
+            border-radius: 10px;
+            width: 800px;
+            height: 400px;
+            background: white;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px;
+            border: 2px solid red;
+            font-size: 18px;
+        }
+
+        canvas.shake {
+            animation: shake 0.5s linear 1;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translate(1px, 1px) ;
+            }
+
+            10% {
+                transform: translate(-1px, -2px) ;
+            }
+
+            20% {
+                transform: translate(-3px, 0px) ;
+            }
+
+            30% {
+                transform: translate(3px, 2px) ;
+            }
+
+            40% {
+                transform: translate(1px, -1px) ;
+            }
+
+            50% {
+                transform: translate(-1px, 2px);
+            }
+
+            60% {
+                transform: translate(-3px, 1px) ;
+            }
+
+            70% {
+                transform: translate(3px, 1px) ;
+            }
+
+            80% {
+                transform: translate(-1px, -1px) ;
+            }
+
+            90% {
+                transform: translate(1px, 2px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(1px, -2px) rotate(-1deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cnvasWrap">
+
+
+        <canvas id="eatc-a-sketch" width="1600" height="800"></canvas>
+        <br>
+        <button class="shake">shake!</button>
+    </div>
+    <script src="sketch.js"></script>
+
+</body>
+
+</html>
